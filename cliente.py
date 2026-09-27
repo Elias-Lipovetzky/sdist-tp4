@@ -1,4 +1,5 @@
 import grpc
+import os
 from dotenv import load_dotenv
 import temperatura_pb2
 import temperatura_pb2_grpc
