@@ -26,6 +26,11 @@ class TemperaturasServicer(temperatura_pb2_grpc.TemperaturasServicer):
     def ObtenerTemperaturas(self, request, context):
         codigo = request.codigo
 
+        peer = context.peer()
+
+        print(f"Request recibido desde {peer}")
+        print(f"Ciudad solicitada: {codigo}")
+
         valores = temperaturas.get(codigo)
 
         if valores is None:
