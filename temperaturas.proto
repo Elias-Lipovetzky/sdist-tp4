@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Temperaturas {
+  rpc ObtenerTemperaturas (Ciudad) returns (TemperaturasResponse);
+}
+
+message Ciudad {
+  string codigo = 1;
+}
+
+message TemperaturasResponse {
+  repeated float temperaturas = 1;
+}
